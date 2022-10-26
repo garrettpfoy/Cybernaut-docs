@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  docs:
+    container_name: docs
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "8000:8000"
+    networks:
+      - public
+    environment:
+      LIVE_RELOAD_SUPPORT: 'true'
+      ADD_MODULES: 'fontawesome-markdown mkdocs-git-revision-date-localized-plugin mkdocs-material'
+      FAST_MODE: 'true'
+      DOCS_DIRECTORY: '/docs'
+    command: bash -c "mkdocs serve --dev-addr 0.0.0.0:8000"
+
+networks:
+  public: {}

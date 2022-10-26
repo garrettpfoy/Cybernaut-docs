@@ -1,0 +1,26 @@
+site_name: Cybernaut Documentation
+site_url: 'http://0.0.0.0:8000'
+site_description: Thorough documentation for Cybernaut projects.
+site_author: Cybernaut Team
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Turn the lights off!
+      primary: deep purple
+      accent: purple
+
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Turn the light on!
+      primary: deep purple
+      accent: purple
+nav:
+  - Home: index.md
+  - Orbit: orbit.md
